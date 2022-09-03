@@ -2,10 +2,15 @@ from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import HttpResponse,JsonResponse
 from .models import Pages
-from django.core.serializers import serialize 
+from django.core.serializers import serialize
+from .serializers import PagesSerializer
+from rest_framework import viewsets 
 import json
 
 # Create your views here.
+class PagesView(viewsets.ModelViewSet):  
+    serializer_class = PagesSerializer   
+    queryset = Pages.objects.all() 
 
 def index(request):
     pages = Pages.objects.all()
