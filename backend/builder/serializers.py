@@ -1,20 +1,15 @@
-from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from .models import Pages
+from builder.models import Pages, Templetes, Catagories
 
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ['url', 'username', 'email', 'groups']
-
-
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ['url', 'name']
-        
 class PagesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pages
-        fields = ('id' ,'name', 'description', 'html', 'css')
+        fields = ['id', 'name', 'description', 'Page_pic', 'html', 'css']
+class TempletesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Templetes
+        fields ='__all__'
+class CatagoriesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Catagories
+        fields ='__all__'
