@@ -14,7 +14,7 @@ function Nav() {
 
       <div className="nav-header">
         <div className="nav-logo">
-          <Link to="#">
+          <Link to='/home'>
             <img src={logo} width="100px" alt="logo"></img>
           </Link>
         </div>
