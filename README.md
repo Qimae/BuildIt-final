@@ -18,7 +18,7 @@
 ```.\env\Scripts\activate```
 
 
-After activating the virtual enviroment install the virtual enviroment
+## After activating the virtual enviroment install the virtual enviroment
 
 ```pip install -r requirements.txt```
 
