@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../Home/Footer/Footer'
-import Nav from '../Home/Nav/Nav'
+import Nav_new from '../Home/Nav/Nav-new'
 import TemplateCard from './TemplateCard'
 // import Maptemp from './maptemp'
 
 function Template() {
     return (
         <>
-            <Nav />
+            <Nav_new />
             <section className="mt-5 pt-5">
                 <div className="btn-group mt-4 d-flex justify-content-start  catagory">
                     <div className="btn-group shadow-0  ms-5">
                         <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-mdb-toggle="dropdown" aria-expanded="false">
-                            Catagori    es
+                            Catagories
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li ><Link className="dropdown-item" to="/">All</Link></li>

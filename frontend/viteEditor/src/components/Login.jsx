@@ -1,10 +1,8 @@
 import React, { useState, useContext } from "react";
 import axiosInstance from "../axios";
 import { useNavigate } from "react-router-dom";
-import "./Login.scss";
+import "./Login.css";
 import { userDetailsContext } from "../Context";
-import Nav from "./Home/Nav/Nav";
-import Footer from "./Home/Footer/Footer";
 
 export default function Login() {
   const history = useNavigate();
@@ -51,13 +49,11 @@ export default function Login() {
         <div className="login-container">
           <div className="container">
             <form className="form" noValidate>
-
-              <h6>ALREADY MEMBERS</h6>
-              <h6>Need help ?</h6>
+              <p>
+                <h8>ALREADY MEMBERS</h8>
+                <h7>Need help ?</h7><br></br><br></br>
+              </p>
               <br></br>
-              <br></br>
-
-
               <input
                 type="email"
                 variant="outlined"

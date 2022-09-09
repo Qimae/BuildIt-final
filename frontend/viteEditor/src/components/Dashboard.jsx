@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCode, FaBookOpen, FaBook, FaSave } from 'react-icons/fa';
-import '../main.scss';
+import '../main.css';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import grapesjs from 'grapesjs';

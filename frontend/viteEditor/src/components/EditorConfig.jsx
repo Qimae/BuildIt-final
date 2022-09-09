@@ -10,7 +10,7 @@ import axiosInstanceapi from "../axiosApi";
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { FaCode, FaBookOpen, FaBook, FaSave } from 'react-icons/fa';
-import '../main.scss';
+import '../main.css';
 
 function EditorConfig() {
     const { id } = useParams()
