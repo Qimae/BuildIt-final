@@ -4,11 +4,11 @@ from builder.models import Pages, Templetes, Catagories
 class PagesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pages
-        fields = ['id', 'name', 'description', 'Page_pic', 'html', 'css']
+        fields = ['id','author','img_url', 'name', 'description', 'Page_pic', 'html', 'css']
 class TempletesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Templetes
-        fields ='__all__'
+        fields = ['id', 'catagory', 'img_url','name', 'description', 'Template_pic', 'html', 'css']
 class CatagoriesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Catagories

@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.shortcuts import render
 from django.http import JsonResponse
 from rest_framework import status
@@ -21,17 +22,20 @@ from django.views.decorators.csrf import csrf_exempt
 @api_view(['GET'])
 def apiOverview(request):
 	api_urls = {
-		'List':'/pages-list/',
-		'Detail View':'/pages-detail/<str:pk>/',
-		'Create':'/pages-create/',
-		'Update':'/pages-update/<str:pk>/',
-		'Delete':'/pages-delete/<str:pk>/',
+		'List':'/page-list/',
+		'Detail View':'/page-detail/<str:pk>/',
+		'Create':'/page-create/',
+		'Update':'/page-update/<str:pk>/',
+		'Delete':'/page-delete/<str:pk>/',
 		}
 	return Response(api_urls)
 
 @api_view(['GET'])
 def pageList(request):
-	pages = Pages.objects.all().order_by('-id')
+	print(request.user.id)
+	pages = Pages.objects.filter(author=request.user.id).order_by('-id')
+	print(pages)
+
 	serializer = PagesSerializer(pages, many=True)
 	return Response(serializer.data)
 
@@ -39,25 +43,50 @@ def pageList(request):
 def pageDetail(request, pk):
 	pages = Pages.objects.get(id=pk)
 	serializer = PagesSerializer(pages, many=False)
+	user = request.user
+    # return Pages.objects.filter(purchaser=user)
 	return Response(serializer.data)
 
-@csrf_exempt
+# @csrf_exempt
 @api_view(['POST'])
 def pageCreate(request):
 	# serializer = PagesSerializer(data=request.data)
+	# print(request.getjson())
+	if request.method == 'POST':
+		html = request.data.get('html')
+		css = request.data.get('css')
+		name = request.data.get('name')
+		description = request.data.get('description')
+		img_url = request.data.get('img_url')
+		author = request.user.id
 
-	
-    if request.method == 'POST':
-        serializer = PagesSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+		page1 = {"html":html, "css":css, "name":name, "img_url": img_url,"description":description, "author":author}
+		print(page1)
+		# css : request.data.css
+		# name = request.data.name
+		# description = request.data.description
+		# user = request.user.id
+		
+		serializer = PagesSerializer(data=page1)
+		
+		if serializer.is_valid():
+			serializer.save()
+			return Response(serializer.data, status=status.HTTP_201_CREATED)
+		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['POST'])
 def pageUpdate(request, pk):
 	page = Pages.objects.get(id=pk)
-	serializer = PagesSerializer(instance=page, data=request.data)
+	html = request.data.get('html')
+	css = request.data.get('css')
+	name = request.data.get('name')
+	description = request.data.get('description')
+	img_url = request.data.get('img_url')
+	author = request.user.id
+
+	page1 = {"html":html, "css":css, "name":name, "img_url": img_url,"description":description, "author":author}
+	print(page1)
+	serializer = PagesSerializer(instance=page, data=page1)
 
 	if serializer.is_valid():
 		serializer.save()
@@ -119,12 +148,14 @@ def catagoriesDelete(request, pk):
 @api_view(['GET'])
 def templateList(request):
 	templetes = Templetes.objects.all().order_by('-id')
+	print(templetes)
 	serializer = TempletesSerializer(templetes, many=True)
 	return Response(serializer.data)
 
 @api_view(['GET'])
 def templeteDetail(request, pk):
-	templetes = Templetes.objects.get(id=pk)
+	templetes = Templetes.objects.filter(id=pk)
+	print(templetes)
 	serializer = TempletesSerializer(templetes, many=True)
 	return Response(serializer.data)
 
