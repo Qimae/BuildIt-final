@@ -111,6 +111,7 @@
   background-color: rgb(249, 252, 253);
   border-radius: 5px;
   border: none;
+  color: rgb(1, 51, 97);
 }
 
 .form button {
@@ -132,7 +133,7 @@
 
 
 @media only screen and (max-width: 995px) {
-  
+
 
   .main-container .login-container {
     height: 100vh;

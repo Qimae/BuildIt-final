@@ -15,7 +15,7 @@ function SecondSec() {
                     <ol>
                         <li>
                             <h4>
-                            <span>1. </span>Create your portfolio website</h4>
+                            <span>1.</span>Create your portfolio website</h4>
                             <p>Tell the world about who you are with our elegent designs</p>
                         </li>
                         <li>

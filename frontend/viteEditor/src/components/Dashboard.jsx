@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCode, FaBookOpen, FaBook, FaSave } from 'react-icons/fa';
-import '../main.css';
+import './Dashboard.css';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import grapesjs from 'grapesjs';
@@ -9,14 +9,9 @@ import grapesjs from 'grapesjs';
 
 
 function Dashboard() {
-
-
     const { id } = useParams()
     const [edi, setEdi] = useState(null)
     const [saveContent, setSaveContent] = useState(null)
-
-
-
 
     useEffect(() => {
 
@@ -48,35 +43,58 @@ function Dashboard() {
 
     return (
         <div className='Dashboard'>
-            <div id='navbar' className='sidenav d-flex flex-column overflow-scroll'>
-                <nav className='navbar navbar-light'>
-                    <div className='container-fluid'>
-                        <span className='navbar-brand mb-0 h3 logo'>Build<span className='logo-text'>It</span></span>
-                    </div>
-                </nav>
-                <div className='my-5 d-flex flex-column '>
-                    <ul className='list-group pages'>
-                        <li className='list-group-item d-flex justify-content-between align-items-center'>
-                            <Link className="Links" to="/pages"><FaBookOpen />
-                                <span className='Linkstext'><b>Pages</b></span>
-                            </Link></li>
-                        <li className='list-group-item d-flex justify-content-between align-items-center'>
-                            <Link className='Links' to="/editor"><FaCode />
-                                <span className='Linkstext'><b>Editor</b></span>
-                            </Link></li>
-                        <li className='list-group-item d-flex justify-content-between align-items-center'>
-                            <Link className='Links' to="/"><FaBook />
-                                <span className='Linkstext'><b>Publish</b></span>
-                            </Link></li>
-                        <li className='list-group-item d-flex justify-content-between align-items-center'>
-                            <button className='Links' onClick={saveContent}><FaSave />
-                                <span className='Linkstext'><b>Save</b></span>
-                            </button></li>
-                    </ul>
+            <nav className="main-menu">
+                <h2>Logo</h2>
+                <ul>
+                    <li>
+                        <Link to="/home">
+                            <i className="fa fa-home fa-2x"></i> 
+                            <span className="nav-text">
+                                Home
+                            </span>
+                        </Link>
 
-                </div>
+                    </li><br></br>
+                    <li className="has-subnav">
+                        <Link to="/templates">
+                            <i className="fa fa-laptop fa-2x"></i>
+                            <span className="nav-text">
+                                Templates
+                            </span>
+                        </Link>
 
-            </div>
+                    </li><br></br>
+
+                    <li className="has-subnav">
+                        <Link to="#">
+                            <i className="fa fa-folder-open fa-2x"></i>
+                            <span className="nav-text">
+                                Pages
+                            </span>
+                        </Link>
+
+                    </li><br></br>
+                    <li className="has-subnav">
+                        <Link to="#">
+                            <i className="fa fa-code fa-2x"></i>
+                            <span className="nav-text">
+                                Editor
+                            </span>
+                        </Link>
+                    </li>
+                </ul>
+
+                <ul className="logout">
+                    <li>
+                        <Link to='/logout'>
+                            <i className="fa fa-power-off fa-2x"></i>
+                            <span className="nav-text">
+                                Logout
+                            </span>
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
         </div>
     )
 }

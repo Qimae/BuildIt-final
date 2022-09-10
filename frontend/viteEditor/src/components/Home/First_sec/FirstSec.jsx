@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './FirstSec.css';
+import bold from '../../../assets/Bold.jpg'
 
 function FirstSec() {
     return (
         <div class="row">
             <div className="column">
-               <img></img>
+               <img src={bold} className='bold'></img>
             </div>
             <div className="column">
                 <h2>Build your online<br></br>presence here</h2>

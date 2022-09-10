@@ -1,7 +1,7 @@
 :root {
     --clr-bg: #599191;
     --clr-light: white;
-    --clr-dark: black;
+    --clr-dark: rgb(1, 51, 97);
     --clr-orange: orange;
 }
 
@@ -40,6 +40,12 @@
     background-color: var(--clr-bg);
     color:white;
     border-right: none;
+
+
+}
+.column .bold {
+    padding-top: 80px;
+    height: 500px
 
 
 }

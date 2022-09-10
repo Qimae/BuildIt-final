@@ -1,0 +1,79 @@
+
+:root {
+    --primary-color-white: white;
+    --primary-color-light-blue: #599191;
+    --text-color: whitesmoke;
+    --icon-color: whitesmoke;
+    --icon-color-hover: #11dbff;
+    --border-color: var(--icon-color-hover);
+
+}
+
+.main-content {
+    width: 100%;
+    left:0;
+    height: 100%;
+}
+.fa {
+    display: initial;
+}
+.fa:hover {
+    color: blue;
+}
+
+.gjs-one-bg {
+    background-color: var(--primary-color-light-blue);
+
+}
+
+.gjs-block-categories {
+    background-color: var(--primary-color-light-blue);
+}
+
+.gjs-title {
+    color: var(--primary-color-white);
+    margin-bottom: 10px;
+    
+}
+.gjs-title .gjs-sm-sector-title {
+    background-color: var(--primary-color-light-blue);
+}
+
+.gjs-category-title,
+.gjs-layer-title,
+.gjs-block-category .gjs-title,
+.gjs-sm-sector-title {
+    background-color: var(--primary-color-light-blue);
+}
+
+.gjs-two-color {
+    color: var(--primary-color-white);
+}
+
+.gjs-three-bg {
+    background: var(--primary-color-white);
+    color: var(--primary-color-light-blue);
+}
+.gjs-dashed {
+    padding-top: 40px;
+}
+
+.gjs-four-color,
+.gjs-four-color-h:hover {
+    color: var(--icon-color-hover);
+}
+.gjs-pn-buttons {
+    height: 40px;
+}
+
+.gjs-pn-btn:hover {
+    color: var(--icon-color-hover);
+}
+.gjs-pn-btn.gjs-pn-active {
+    background-color: var(--primary-color-light-blue);
+    color: var(--primary-color-white);
+    box-shadow: 0 0.1rem 0.3rem black;
+    height: fit-content;
+    width: fit-content;
+
+}

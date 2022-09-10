@@ -32,19 +32,20 @@ function Nav() {
       <div className="nav-links">
         <Link to='/home'>Home</Link>
         <Link to='/'>Product</Link>
-        <Link to='/'>Resources</Link>
+        <Link to='/editor'>Editor</Link>
         <Link to='/template'>Templates</Link>
         {!islogd ?
           <>
-            <button className="loginBtn1">Log in</button>
-            <button className="loginBtn2">Sign Up</button>
+            <Link to='/'>
+              <button className="loginBtn1">Log in</button></Link>
+            <Link to='/register'>
+              <button className="loginBtn2">Sign Up</button></Link>
           </>
           :
-          <button className="loginBtn3">Log out</button>
+          <Link to='/logout'>
+            <button className="loginBtn3">Log out</button></Link>
         }
-
       </div>
-
     </div>
   )
 }
