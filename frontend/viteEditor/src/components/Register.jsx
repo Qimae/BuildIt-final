@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axiosInstance from '../axios';
 import { useNavigate } from 'react-router-dom';
 //MaterialUI
+import './Login.css';
 
 
 
@@ -44,15 +45,15 @@ export default function Register() {
 
   return (
     <div className="Login">
-      <nav></nav>
       <div className="main-container">
         <div className="login-container">
           <div className="container">
             <form className="form" noValidate>
               <p>
-                <h6>ALREADY MEMBERS</h6>
+                <h8>NOT A MEMBER</h8>
                 <h7>Need help ?</h7><br></br><br></br>
               </p>
+              <br></br>
 
               <input
                 variant="outlined"
@@ -74,7 +75,7 @@ export default function Register() {
                 label="Username"
                 name="username"
                 autoComplete="username"
-                placeholder='user name'
+                placeholder='Username'
                 onChange={handleChange}></input><br></br>
               <input
                 variant="outlined"
@@ -84,7 +85,7 @@ export default function Register() {
                 label="Password"
                 type="password"
                 id="password"
-                placeholder='password'
+                placeholder='Password'
                 autoComplete="current-password"
                 onChange={handleChange}
               ></input><br></br>
@@ -96,12 +97,12 @@ export default function Register() {
                 variant="contained"
                 color="primary"
                 onClick={handleSubmit}
-              >Sign UP</button>
+              >Sign Up</button>
             </form>
           </div>
           <div className="container-2">
             <p>Already have an account ?<br></br>
-              <a href="/"><span>Sign in</span></a>
+              <a href="/"><span>Login Here</span></a>
             </p>
           </div>
 

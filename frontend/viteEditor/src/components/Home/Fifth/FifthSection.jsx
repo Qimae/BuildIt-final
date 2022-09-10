@@ -1,143 +1,40 @@
-import React from 'react'
-import avator from '../../../assets/Ellipse_4.png'
+import React from 'react';
+import './FifthSection.css';
 
 function FifthSection() {
     return (
-        <section className="fifth-section pt-5 ">
-            <div className="container mt-5 pt-5">
-                <h1 className="testimony">Our Testimonials</h1>
-            </div>
-            <div>
-                <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <div className="container">
-                                <div className="row mx-auto">
-                                    <div className="col-sm-10 col-md-3 card-test p-3">
-                                        <div>
-                                            “Buyer buzz partner network disruptive non-disclosure agreement business”
-                                        </div>
-                                        <div className="d-flex flex-row mt-5">
-                                            <img src={avator} alt=""></img>
-                                            <div className=" d-flex flex-column px-3 pt-3">
-                                                <div>
-                                                    Tihitna Sisay
-                                                </div>
-                                                <div>
-                                                    manager@builtit
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-10 col-md-3 card-test">
-                                        <div>
-                                            “Buyer buzz partner network disruptive non-disclosure agreement business”
-                                        </div>
-                                        <div className="d-flex flex-row mt-5">
-                                            <img src={avator} alt=""></img>
-                                            <div className=" d-flex flex-column px-3 pt-3">
-                                                <div>
-                                                    Tihitna Sisay
-                                                </div>
-                                                <div>
-                                                    manager@builtit
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-10 col-md-3 card-test">
-                                        <div>
-                                            “Buyer buzz partner network disruptive non-disclosure agreement business”
-                                        </div>
-                                        <div className="d-flex flex-row mt-5">
-                                            <div className="d-flex flex-row mt-5">
-                                                <div className=" d-flex flex-column px-3 pt-3">
-                                                    <div>
-                                                        Tihitna Sisay
-                                                    </div>
-                                                    <div>
-                                                        manager@builtit
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            </div>
-                            <div className="carousel-item">
-                                <div className="container">
-                                    <div className="row mx-auto">
-                                        <div className="col-sm-10 col-md-3 card-test p-3">
-                                            <div>
-                                                “Buyer buzz partner network disruptive non-disclosure agreement business”
-                                            </div>
-                                            <div className="d-flex flex-row mt-5">
-                                                <div className="d-flex flex-row mt-5">
-                                                    <div className=" d-flex flex-column px-3 pt-3">
-                                                        <div>
-                                                            Tihitna Sisay
-                                                        </div>
-                                                        <div>
-                                                            manager@builtit
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-10 col-md-3 card-test p-3">
-                                                <div>
-                                                    “Buyer buzz partner network disruptive non-disclosure agreement business”
-                                                </div>
-                                                <div className="d-flex flex-row mt-5">
-                                                    <div className="d-flex flex-row mt-5">
-                                                        <div className=" d-flex flex-column px-3 pt-3">
-                                                            <div>
-                                                                Tihitna Sisay
-                                                            </div>
-                                                            <div>
-                                                                manager@builtit
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-sm-10 col-md-3 card-test">
-                                                    <div>
-                                                        “Buyer buzz partner network disruptive non-disclosure agreement business”
-                                                    </div>
-                                                    <div className="d-flex flex-row mt-5">
-                                                        <div className="d-flex flex-row mt-5">
-                                                            <div className=" d-flex flex-column px-3 pt-3">
-                                                                <div>
-                                                                    Tihitna Sisay
-                                                                </div>
-                                                                <div>
-                                                                    manager@builtit
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                                        data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                                        data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div className='Fifth-container'>
+            
+            <figure class="snip1157">
+                <blockquote>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.
+                    <div class="arrow"></div>
+                </blockquote>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample3.jpg" alt="sq-sample3" />
+                <div class="author">
+                    <h5>Pelican Steve <span> LIttleSnippets.net</span></h5>
                 </div>
-            </div>
-        </section>
+            </figure>
+            <figure class="snip1157 hover">
+                <blockquote>Thank you. before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...When a report looks this good, you know it'll get an A. That's a tip kids. Write it down.
+                    <div class="arrow"></div>
+                </blockquote>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample27.jpg" alt="sq-sample27" />
+                <div class="author">
+                    <h5>Max Conversion<span> LIttleSnippets.net</span></h5>
+                </div>
+            </figure>
+            <figure class="snip1157">
+                <blockquote>My behaviour is addictive functioning in a disease process of toxic co-dependency. I need holistic healing and wellness before I'll accept any responsibility for my actions.
+                    <div class="arrow"></div>
+                </blockquote>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample17.jpg" alt="sq-sample17" />
+                <div class="author">
+                    <h5>Eleanor Faint<span> LIttleSnippets.net</span></h5>
+                </div>
+            </figure>
+        </div>
+
     )
 }
 

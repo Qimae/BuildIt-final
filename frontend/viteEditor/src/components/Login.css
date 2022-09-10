@@ -7,8 +7,12 @@
   --border-color: var(--icon-color-hover);
 }
 
-body {
+
+.Login {
   background: var(--primary-bg-color-light-blue);
+  height: 100vh;
+  padding-top: 10vh;
+
 }
 
 .Login .header {
@@ -16,25 +20,26 @@ body {
   padding-top: 100px;
 }
 
-.main-container {
+.Login .main-container {
   display: block;
   margin: auto;
   border-radius: 10px;
   width: 70%;
   height: 80vh;
   padding: 60px;
-  margin-top: 60px;
   background-color: var(--primary-color-white);
-  color: black;
-  background-image: url("../assets/bg-container.jpg");
+  background-image: url('../assets/bg-container.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .main-container .login-container {
-  padding-top: 5vh;
+  padding-top: 10vh;
   color: var(--text-color);
+
 }
+
 .main-container .login-container .container {
   display: flex;
   flex-direction: column;
@@ -45,8 +50,8 @@ body {
   margin-top: 5%;
   box-shadow: 0 0.3rem 0.3rem var(--border-color);
   background-color: var(--primary-color-white);
-  color: black;
 }
+
 .main-container .login-container .container-2 {
   position: relative;
   border: none;
@@ -55,36 +60,39 @@ body {
   margin-top: 3%;
   margin-left: 100%;
 }
+
 .main-container .login-container .container-2 p {
   text-align: center;
 }
+
 .main-container .login-container .container-2 p a {
   text-decoration: none;
 }
+
 .main-container .login-container .container-2 p a span {
   color: var(--primary-bg-color-light-blue);
   text-align: center;
 }
+
 .main-container .login-container .container-2 p a span:hover {
   color: var(--primary-color-white);
-}
-
-::-moz-placeholder {
-  color: rgb(231, 218, 218);
-  text-align: left;
-  font-size: 12px;
-}
-
-:-ms-input-placeholder {
-  color: rgb(231, 218, 218);
-  text-align: left;
-  font-size: 12px;
 }
 
 ::placeholder {
   color: rgb(231, 218, 218);
   text-align: left;
   font-size: 12px;
+}
+
+.form p h7 {
+  float: right;
+  margin-right: 10px;
+  color: rgb(189, 179, 179);
+}
+
+.form p h8 {
+  margin-left: 10px;
+  color: orange;
 }
 
 .form p {
@@ -94,15 +102,7 @@ body {
   margin-right: -20px;
   box-shadow: 0 0.3rem 0.3rem rgb(238, 232, 232);
 }
-.form p h7 {
-  float: right;
-  margin-right: 10px;
-  color: rgb(189, 179, 179);
-}
-.form p h8 {
-  margin-left: 10px;
-  color: orange;
-}
+
 .form input {
   padding-left: 20px;
   width: 100%;
@@ -111,7 +111,9 @@ body {
   background-color: rgb(249, 252, 253);
   border-radius: 5px;
   border: none;
+  color: rgb(1, 51, 97);
 }
+
 .form button {
   padding: 10px;
   border-radius: 5px;
@@ -122,30 +124,39 @@ body {
   width: 100%;
   border: none;
 }
+
 .form button:hover {
   background: var(--primary-color-white);
   color: var(--primary-bg-color-light-blue);
   border: 1px solid var(--primary-bg-color-light-blue);
 }
 
+
 @media only screen and (max-width: 995px) {
+
+
   .main-container .login-container {
     height: 100vh;
     padding-top: 5vh;
     color: var(--text-color);
   }
+
   .main-container .login-container .container {
     display: block;
     width: 100%;
-    margin: auto;
   }
+
   .main-container .login-container .container-2 {
     display: block;
     width: 100%;
     margin: auto;
     margin-top: 3%;
   }
+
   .form p {
-    font-size: 10px;
+
+    font-size: 9px;
+
   }
-}/*# sourceMappingURL=Login.css.map */
+
+}
