@@ -27,8 +27,9 @@ function EditorConfig() {
         // const urlparam = url
         location.pathname == `/tmpedit/${id}` ?
 
-            axios.get(`http://localhost:8000/template-detail/${id}/`).then((response) => {
-                const html = response.data[0].html
+
+    axiosInstanceapi.get(`templete-detail/${id}/`).then((response) => {
+            const html = response.data[0].html
 
                 const css = response.data[0].css
                 const imgUrl = response.data[0].img_url
