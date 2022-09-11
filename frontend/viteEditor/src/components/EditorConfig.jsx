@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom';
 import { FaCode, FaBookOpen, FaBook, FaSave } from 'react-icons/fa';
 
 import './Editor.css';
+import Dashboard from './Dashboard';
 function EditorConfig() {
     const { id } = useParams()
     // const [temp, setTemp] = useState([])
@@ -201,6 +202,7 @@ function EditorConfig() {
 
         <>
             <div className='Editor'>
+                <Dashboard />
                 <div className='main-content'>
                     <div id='editor'>
                     </div>

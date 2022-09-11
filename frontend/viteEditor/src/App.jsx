@@ -13,6 +13,7 @@ import EditorConfig from "./components/EditorConfig";
 import Register from "./components/Register";
 import Logout from "./components/Logout";
 import UserDetailsProvider from "./Context";
+import Dashboard from "./components/Dashboard";
 // import Editonly from './components/Editonly';
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
       <Routes>
         <Route exact path="/home" element={<Home />} />
         <Route path="/template" element={<Template />} />
+        <Route path="/editor" element={<EditorConfig />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        
+
         <Route path="/editor/:id" element={<EditorConfig />} />
         <Route path="/tmpedit/:id" element={<EditorConfig />} />
         <Route path="/template/editor" element={<EditorConfig />} />
