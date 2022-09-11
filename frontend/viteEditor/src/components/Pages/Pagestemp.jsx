@@ -37,8 +37,7 @@ function TemplateCard() {
 
   const handleDelet = async (id) => {
     try {
-      const res = await axiosInstanceapi
-        .delete(`page-delete/${id}`)
+      const res = await axiosInstanceapi.delete(`page-delete/${id}`)
         .then(() => {
           axiosInstanceapi.get("page-list/").then((response) => {
             const res = response.data;
