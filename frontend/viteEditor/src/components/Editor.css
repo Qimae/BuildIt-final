@@ -10,12 +10,13 @@
 }
 
 .main-content {
-    width: 100%;
-    left:0;
+    width: 95%;
+    left:5%;
     height: 100%;
 }
 .fa {
     display: initial;
+    font-size: 20px;
 }
 .fa:hover {
     color: blue;
@@ -55,7 +56,7 @@
     color: var(--primary-color-light-blue);
 }
 .gjs-dashed {
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .gjs-four-color,
@@ -63,7 +64,7 @@
     color: var(--icon-color-hover);
 }
 .gjs-pn-buttons {
-    height: 40px;
+    height: 33px;
 }
 
 .gjs-pn-btn:hover {

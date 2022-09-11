@@ -29,7 +29,7 @@ function SecondSec() {
                             <p>Promote your products here</p>
                         </li>
                     </ol>
-                    <button className='btn-3'><Link to='/'>Get Started</Link></button>
+                    <button className='btn-3'><Link to='/editor'>Get Started</Link></button>
                 </div>
             </div>
             <h2>Our Testimonials</h2>

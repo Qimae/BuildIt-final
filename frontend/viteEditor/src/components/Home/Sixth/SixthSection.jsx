@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Sixth.css';
 
 function SixthSection() {
@@ -6,7 +7,7 @@ function SixthSection() {
         <div className='contact'>
             <h2>Let's BuildIt</h2>
             <input type='text' placeholder='Email Address'></input>
-            <button className='btn-5'>Start Now</button>
+            <Link to=''><button className='btn-5'>Start Now</button></Link>
         </div>
     )
 }
