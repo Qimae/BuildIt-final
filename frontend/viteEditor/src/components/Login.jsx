@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import axios from "../axios";
+import axiosInstance from "../axios";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { userDetailsContext } from "../Context";
@@ -26,7 +26,7 @@ export default function Login() {
     console.log(formData);
 
     
-      axios
+      axiosInstance
       .post(`token/`, {
         email: formData.email,
         password: formData.password,
@@ -35,7 +35,7 @@ export default function Login() {
       .then((res) => {
         localStorage.setItem("access_token", res.data.access);
         localStorage.setItem("refresh_token", res.data.refresh);
-        axios.defaults.headers["Authorization"] =
+        axiosInstance.defaults.headers["Authorization"] =
           "JWT " + localStorage.getItem("access_token");
         history("/home");
         console.log(res);

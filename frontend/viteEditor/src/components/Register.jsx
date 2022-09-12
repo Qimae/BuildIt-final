@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
-import axiosInstance from '../axios';
-import { useNavigate } from 'react-router-dom';
+
+import React, { useState } from "react";
+import axiosInstance from "../axios";
+import { useNavigate } from "react-router-dom";
 //MaterialUI
-import './Login.css';
-
-
+import "./Login.css";
 
 export default function Register() {
   const history = useNavigate();
   const initialFormData = Object.freeze({
-    email: '',
-    username: '',
-    password: '',
+    email: "",
+    username: "",
+    password: "",
   });
 
   const [formData, updateFormData] = useState(initialFormData);
-
+  const [emailErr, setEmailErr] = useState("");
+  const [passErr, setPassErr] = useState("");
+  const [userErr, setUserErr] = useState("");
   const handleChange = (e) => {
     updateFormData({
       ...formData,
@@ -35,13 +36,34 @@ export default function Register() {
         password: formData.password,
       })
       .then((res) => {
-        history('/');
+        history("/");
         console.log(res);
         console.log(res.data);
+      })
+      .catch(function (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          const emailErr = error.response.data.email;
+          const passerr = error.response.data.password;
+          const usererr = error.response.data.username;
+          setPassErr(passerr);
+          setEmailErr(emailErr);
+          setUserErr(usererr);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request);
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log("Error", error.message);
+        }
+        console.log(error.config);
       });
   };
-
-
 
   return (
     <div className="Login">
@@ -50,8 +72,10 @@ export default function Register() {
           <div className="container">
             <form className="form" noValidate>
               <p>
-                <h8>NOT A MEMBER</h8>
-                <h7>Need help ?</h7><br></br><br></br>
+                <h6>NOT A MEMBER</h6>
+                <h5>Need help ?</h5>
+                <br></br>
+                <br></br>
               </p>
               <br></br>
 
@@ -63,9 +87,13 @@ export default function Register() {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
-                placeholder='Email Address'
+                placeholder="Email Address"
                 onChange={handleChange}
-              ></input><br></br>
+              ></input>
+              <p>
+                <h6>{emailErr}</h6>
+              </p>
+              <br></br>
 
               <input
                 variant="outlined"
@@ -75,8 +103,14 @@ export default function Register() {
                 label="Username"
                 name="username"
                 autoComplete="username"
-                placeholder='Username'
-                onChange={handleChange}></input><br></br>
+                placeholder="Username"
+                onChange={handleChange}
+              ></input>
+              <br></br>
+              <p>
+                <h6>{userErr}</h6>
+              </p>
+
               <input
                 variant="outlined"
                 required
@@ -85,32 +119,38 @@ export default function Register() {
                 label="Password"
                 type="password"
                 id="password"
-                placeholder='Password'
+                placeholder="Password"
                 autoComplete="current-password"
                 onChange={handleChange}
-              ></input><br></br>
+              ></input>
+              <br></br>
 
 
-              <button name="submit"
+              <p>
+                <h6>{passErr}</h6>
+              </p>
+              <button
+                name="submit"
                 type="submit"
                 fullWidth
                 variant="contained"
                 color="primary"
                 onClick={handleSubmit}
-              >Sign Up</button>
+              >
+                Sign Up
+              </button>
             </form>
           </div>
           <div className="container-2">
-            <p>Already have an account ?<br></br>
-              <a href="/"><span>Login Here</span></a>
+            <p>
+              Already have an account ?<br></br>
+              <a href="/">
+                <span>Login Here</span>
+              </a>
             </p>
           </div>
-
-
         </div>
       </div>
-
-
     </div>
   );
 }
