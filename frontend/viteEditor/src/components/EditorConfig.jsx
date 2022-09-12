@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import grapesjs from 'grapesjs';
 import gjsPresetWebpage from 'grapesjs-blocks-basic';
@@ -18,6 +19,8 @@ import './Editor.css';
 import Dashboard from './Dashboard';
 function EditorConfig() {
     const { id } = useParams()
+    const history = useNavigate();
+
     // const [temp, setTemp] = useState([])
     const [editor, setEditor] = useState(null)
     const [imgUrl, setImgUrl] = useState("https://i.postimg.cc/K8bnD8sr/photo-2022-09-03-12-09-45.jpg")
@@ -34,6 +37,7 @@ function EditorConfig() {
 
                 const css = response.data[0].css
                 const imgUrl = response.data[0].img_url
+                setImgUrl(imgUrl)
                 console.log(imgUrl)
                 const temp = `${html}<style>${css}</style>`
 
@@ -49,6 +53,7 @@ function EditorConfig() {
                 const html = response.data.html
                 const css = response.data.css
                 const temp = `${html}<style>${css}</style>`
+                setImgUrl(imgUrl)
                 // setTemp(temp)
                 editor.addComponents(`<div>
             ${temp}
@@ -99,7 +104,7 @@ function EditorConfig() {
             }
         })
         setEditor(editor)
-        setImgUrl(imgUrl)
+        
         editor.Panels.addButton
             ('options',
                 [{
@@ -134,7 +139,7 @@ function EditorConfig() {
                                     "css": cssdata,
                                     "img_url": imgUrl
                                     // "author": {id}
-                                }) : (
+                                }).then(history("/pages")) : (
                                 id ? (
                                     axiosInstanceapi.post(`page-update/${id}/`,
                                         {
@@ -143,7 +148,7 @@ function EditorConfig() {
                                             "html": htmldata,
                                             "css": cssdata,
                                             "img_url": imgUrl
-                                        }).then(console.log(id))) : axiosInstanceapi.post(`page-create/`,
+                                        }).then(history("/pages"))) : axiosInstanceapi.post(`page-create/`,
                                             {
                                                 "name": "untitled",
                                                 "description": "no description",
@@ -151,7 +156,7 @@ function EditorConfig() {
                                                 "css": cssdata,
                                                 "img_url": imgUrl
                                                 // "author": {id}
-                                            }))
+                                            }).then(history("/pages")))
                     }
                 });
         editor.on('storage:load', function (e) { console.log('Loaded ', e); });

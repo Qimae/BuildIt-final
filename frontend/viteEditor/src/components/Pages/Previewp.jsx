@@ -4,10 +4,12 @@ import axios from 'axios'
 import axiosInstanceapi from "../../axiosApi";
 
 import { useParams } from 'react-router-dom'
+import { Helmet } from "react-helmet";
 
 function Previewp() {
 
     const [tempprev, setTemp] = useState([])
+    const [js, setJs] = useState(null)
     const { id } = useParams()
     console.log(id)
 
@@ -17,14 +19,20 @@ function Previewp() {
             const html = response.data.html
 
             const css = response.data.css
+            const js = response.data.js
             const temp = `${html}<style>${css}</style>`
             setTemp(temp)
+            setJs(js)
             console.log(tempprev)
 
         })
     }, [])
 
-    return ( <div >
+    return ( 
+    <div >
+        <Helmet>
+            <script>{js}</script>
+        </Helmet>
         <div dangerouslySetInnerHTML = {
             { __html: tempprev } }
         /> </div>

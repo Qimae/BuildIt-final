@@ -8,10 +8,12 @@ import img from "../../assets/photo-1496181133206-80ce9b88a853.avif";
 import edit from "../../assets/icons8-edit-30.png";
 import delet from "../../assets/icons8-delete-30.png";
 import Dashboard from "../Dashboard";
+import { Helmet } from "react-helmet";
 // import Maptemp from './maptemp'
 
 function TemplateCard() {
   const [temp, setTemp] = useState([]);
+  const [js, setJs] = useState(null)
 
   const { id } = useParams();
   // const [csst, setCsst] = useState('')
@@ -37,11 +39,10 @@ function TemplateCard() {
 
   const handleDelet = async (id) => {
     try {
-      const res = await axiosInstanceapi.delete(`page-delete/${id}`)
-        .then(() => {
+       axiosInstanceapi.delete(`page-delete/${id}`).then(() => {
           axiosInstanceapi.get("page-list/").then((response) => {
             const res = response.data;
-            console.log(res);
+            console.log("res");
             setTemp(res);
             // console.log(temp)
             // return res

@@ -91,7 +91,7 @@ export default function Register() {
                 onChange={handleChange}
               ></input>
               <p>
-                <h6>{emailErr}</h6>
+                <h6 style="color:blue;">{emailErr}</h6>
               </p>
               <br></br>
 
