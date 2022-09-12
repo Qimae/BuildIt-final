@@ -46,12 +46,12 @@ export default function Register() {
           // that falls out of the range of 2xx
           const emailErr = error.response.data.email;
           const passerr = error.response.data.password;
-          const usererr = error.response.data.username;
+          const usererr = error.response.data.user_name;
           setPassErr(passerr);
           setEmailErr(emailErr);
           setUserErr(usererr);
-          console.log(error.response.status);
-          console.log(error.response.headers);
+          console.log(error.response.data);
+          // console.log(error.response.headers);
         } else if (error.request) {
           // The request was made but no response was received
           // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
@@ -91,7 +91,7 @@ export default function Register() {
                 onChange={handleChange}
               ></input>
               <p>
-                <h6 style="color:blue;">{emailErr}</h6>
+                <h6 >{emailErr}</h6>
               </p>
               <br></br>
 
