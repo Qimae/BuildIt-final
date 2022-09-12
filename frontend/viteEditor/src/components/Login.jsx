@@ -45,7 +45,7 @@ export default function Login() {
         console.log(islogd)
       })
       .catch((err) => {
-        const errorMessage = err.response
+        const errorMessage = err.response.data.detail
         setErrorMessage(errorMessage)
       });
   };
