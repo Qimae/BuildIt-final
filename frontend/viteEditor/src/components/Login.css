@@ -45,7 +45,7 @@
   flex-direction: column;
   float: right;
   border-radius: 10px;
-  width: 25%;
+  width: 35%;
   padding: 20px;
   margin-top: 5%;
   box-shadow: 0 0.3rem 0.3rem var(--border-color);
@@ -56,7 +56,7 @@
   position: relative;
   border: none;
   float: right;
-  width: 25%;
+  width: 40%;
   margin-top: 3%;
   margin-left: 100%;
 }
@@ -84,13 +84,13 @@
   font-size: 12px;
 }
 
-.form p h7 {
+.form p h7, h5 {
   float: right;
   margin-right: 10px;
   color: rgb(189, 179, 179);
 }
 
-.form p h8 {
+.form p h8, h6 {
   margin-left: 10px;
   color: orange;
 }
