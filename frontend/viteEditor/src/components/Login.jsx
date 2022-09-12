@@ -1,10 +1,11 @@
 import React, { useState, useContext } from "react";
-import axiosInstance from "../axios";
+import axios from "../axios";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { userDetailsContext } from "../Context";
 
 export default function Login() {
+  const [errorMessage, setErrorMessage] = useState('');
   const history = useNavigate();
   const initialFormData = Object.freeze({
     email: "",
@@ -24,21 +25,28 @@ export default function Login() {
     e.preventDefault();
     console.log(formData);
 
-    axiosInstance
+    
+      axios
       .post(`token/`, {
         email: formData.email,
         password: formData.password,
       })
+    
       .then((res) => {
         localStorage.setItem("access_token", res.data.access);
         localStorage.setItem("refresh_token", res.data.refresh);
-        axiosInstance.defaults.headers["Authorization"] =
+        axios.defaults.headers["Authorization"] =
           "JWT " + localStorage.getItem("access_token");
         history("/home");
         console.log(res);
+        console.log(`error`);
         console.log(res.data);
         setIsloged(true);
         console.log(islogd)
+      })
+      .catch((err) => {
+        const errorMessage = err.response
+        setErrorMessage(errorMessage)
       });
   };
 
@@ -54,6 +62,7 @@ export default function Login() {
                 <h7>Need help ?</h7><br></br><br></br>
               </p>
               <br></br>
+              
               <input
                 type="email"
                 variant="outlined"
@@ -81,7 +90,8 @@ export default function Login() {
                 onChange={handleChange}
               ></input>
               <br></br>
-
+              <p><h8>{errorMessage}</h8></p>
+              <br></br>
               <button
                 name="submit"
                 type="submit"
@@ -93,6 +103,7 @@ export default function Login() {
               >
                 Sign In
               </button>
+              
             </form>
           </div>
           <div className="container-2">
