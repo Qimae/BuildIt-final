@@ -85,12 +85,12 @@ export default function Login() {
                 label="Password"
                 type="password"
                 id="password"
-                placeholder="password"
+                placeholder="Password"
                 autoComplete="current-password"
                 onChange={handleChange}
               ></input>
+              <span><h8>{errorMessage}</h8></span>
               <br></br>
-              <p><h8>{errorMessage}</h8></p>
               <br></br>
               <button
                 name="submit"

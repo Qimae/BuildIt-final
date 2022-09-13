@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import IMG from '../../../assets/Rectangle_1270@2x.png';
 import './SecondSec.css';
 
 function SecondSec() {
@@ -9,7 +8,7 @@ function SecondSec() {
             <h2>Grow your online exposure with us!</h2>
             <div class="row-sec">
                 <div className="column-sec">
-                    <img src={IMG} alt='guy'></img>
+                <div className='column-image'></div>
                 </div>
                 <div className="column-sec">
                     <ol>

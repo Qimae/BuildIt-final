@@ -84,13 +84,15 @@
   font-size: 12px;
 }
 
-.form p h7, h5 {
+.form p h7,
+h5 {
   float: right;
   margin-right: 10px;
   color: rgb(189, 179, 179);
 }
 
-.form p h8, h6 {
+.form p h8,
+h6 {
   margin-left: 10px;
   color: orange;
 }
@@ -101,6 +103,11 @@
   margin-left: -20px;
   margin-right: -20px;
   box-shadow: 0 0.3rem 0.3rem rgb(238, 232, 232);
+}
+
+.form span {
+  color: red;
+  font-size: .8rem;
 }
 
 .form input {
@@ -132,25 +139,33 @@
 }
 
 
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 995px) and (min-width: 300px) {
 
 
   .main-container .login-container {
     height: 100vh;
-    padding-top: 5vh;
+    padding-top: 1vh;
     color: var(--text-color);
   }
 
   .main-container .login-container .container {
     display: block;
-    width: 100%;
+    width: auto;
+    margin-left: -40px;
+    margin-right: -40px;
+
   }
 
   .main-container .login-container .container-2 {
     display: block;
     width: 100%;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 10%;
+
+  }
+
+  .main-container .login-container .container-2 p a span {
+    color: aqua;
   }
 
   .form p {

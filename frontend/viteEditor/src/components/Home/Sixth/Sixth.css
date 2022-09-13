@@ -47,19 +47,19 @@
     border: 1px solid var(--clr-bg);
 }
 
-@media screen and (max-width: 986px) {
+@media screen and (max-width: 986px) and (min-width: 300px) {
     .btn-5 {
         width: 25%;
         font-size: .7rem;
         margin-left: 10px;
-        padding: 11px;
+        padding: 5px;
         border-radius: 10px;
 
     }
 
     .contact input {
-        width: 25%;
-        padding: 5px;
+        width: 50%;
+        padding: 3px;
         border-radius: 10px;
     }
 

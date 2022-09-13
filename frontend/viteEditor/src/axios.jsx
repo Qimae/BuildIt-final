@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const baseURL = "https://builditbackend.herokuapp.com/api/";
+const baseURL = "https://buildit-production.herokuapp.com/api/";
 
 const axiosInstance = axios.create({
   baseURL: baseURL,

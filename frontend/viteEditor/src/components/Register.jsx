@@ -72,8 +72,8 @@ export default function Register() {
           <div className="container">
             <form className="form" noValidate>
               <p>
-                <h6>NOT A MEMBER</h6>
-                <h5>Need help ?</h5>
+                <h8>NOT A MEMBER</h8>
+                <h7>Need help ?</h7>
                 <br></br>
                 <br></br>
               </p>
@@ -90,9 +90,9 @@ export default function Register() {
                 placeholder="Email Address"
                 onChange={handleChange}
               ></input>
-              <p>
-                <h6 >{emailErr}</h6>
-              </p>
+              <span>  
+                <h9 >{emailErr}</h9>
+              </span>
               <br></br>
 
               <input
@@ -107,9 +107,9 @@ export default function Register() {
                 onChange={handleChange}
               ></input>
               <br></br>
-              <p>
-                <h6>{userErr}</h6>
-              </p>
+              <span>
+                <h9>{userErr}</h9>
+              </span>
 
               <input
                 variant="outlined"
@@ -124,11 +124,9 @@ export default function Register() {
                 onChange={handleChange}
               ></input>
               <br></br>
-
-
-              <p>
-                <h6>{passErr}</h6>
-              </p>
+              <span>
+                <h9>{passErr}</h9>
+              </span>
               <button
                 name="submit"
                 type="submit"

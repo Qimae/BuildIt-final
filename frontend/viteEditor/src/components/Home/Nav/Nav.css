@@ -16,7 +16,7 @@ body {
     overflow-y: scroll;
     -ms-overflow-style: scrollbar;
     scrollbar-width: 30px;
-  }
+}
 
 
 .navbar {
@@ -42,7 +42,7 @@ body {
     display: inline;
     float: right;
     font-size: 18px;
-    
+
 }
 
 .navbar .nav-links .loginBtn1 {
@@ -80,9 +80,11 @@ body {
 .navbar .nav-links .loginBtn1:hover {
     color: var(--clr-bg);
 }
+
 .navbar .nav-links .loginBtn2:hover {
     color: var(--clr-bg);
 }
+
 .navbar .nav-links .loginBtn3:hover {
     color: var(--clr-bg);
 }
@@ -106,7 +108,7 @@ body {
     display: none;
 }
 
-@media (max-width:700px) {
+@media screen and (max-width:966px) and (min-width: 300px) {
     .navbar .nav-btn {
         display: inline-block;
         position: absolute;

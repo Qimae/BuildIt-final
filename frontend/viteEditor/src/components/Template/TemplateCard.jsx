@@ -7,6 +7,7 @@ import "./Template.css";
 import img from "../../assets/photo-1496181133206-80ce9b88a853.avif";
 import edit from "../../assets/icons8-edit-30.png";
 import delet from "../../assets/icons8-delete-30.png";
+import { FaEdit } from "react-icons/fa";
 // import Maptemp from './maptemp'
 
 function TemplateCard() {
@@ -57,15 +58,7 @@ function TemplateCard() {
     <>
       <div className="bg-white">
         <div className="flex flex-between mt-3">
-          <h1 className=" text-black  px-5">Templates</h1>
-          <Link to="./editor">
-            <button
-              type="button"
-              className="inline-block px-6 py-2.5  text-gray-700 font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] btn-card absolute z-5 right-20"
-            >
-              Add
-            </button>
-          </Link>
+          <h1 className=" text-black  px-5 ml-20">Templates</h1>
         </div>
         {/* <iframe src="https://www.youtube.com/watch?v=AfYfvjP1hK8" width={1000} height={500} sandbox='allow-scripts allow-modal' loading='eager' title='ifr'></iframe> */}
         <div className="mx-auto max-w-2xl py-10 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -101,17 +94,9 @@ function TemplateCard() {
                       preview
                     </button>
                   </Link>
-                  <div className="flex mx-2">
-                    <Link to={`/tmpedit/${item.id}`}>
-                      <img src={edit} alt=""></img>
+                    <Link to={`/tmpedit/${item.id}`} className='edit-icon1'>
+                      <FaEdit />
                     </Link>
-
-                    {/* <img
-                      src={delet}
-                      alt=""
-                      onClick={() => handleDelet(item.id)}
-                    ></img> */}
-                  </div>
                 </div>
               </div>
             ))}

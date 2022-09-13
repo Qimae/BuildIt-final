@@ -10,4 +10,13 @@
     font-size: 2rem;
     color: rgb(1, 51, 97);
 }
+.edit-icon1 {
+    float: right;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    margin-left: 400px;
 
+}
+.edit-icon1:hover {
+    color: var(--clr-orange);
+}

@@ -35,7 +35,7 @@
     color: var(--clr-light);
 }
 
-@media screen and (max-width: 986px) {
+@media screen and (max-width: 986px) and (min-width: 300px) {
     .column-footer {
         width: 100%;
         padding: 20px;
