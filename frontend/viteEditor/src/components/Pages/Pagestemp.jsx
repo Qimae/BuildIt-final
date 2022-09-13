@@ -39,7 +39,18 @@ function TemplateCard() {
 
   const handleDelet = async (id) => {
     try {
-       axiosInstanceapi.delete(`page-delete/${id}`).then(() => {
+
+      axios.delete(`https://buildit-production.herokuapp.com/page-delete/${id}/`,{
+         
+         
+          Authorization: localStorage.getItem("access_token")
+            ? "JWT " + localStorage.getItem("access_token")
+            : null,
+          "Content-Type": "application/json",
+          accept: "application/json",
+        
+        
+      }).then(() => {
           axiosInstanceapi.get("page-list/").then((response) => {
             const res = response.data;
             console.log("res");
