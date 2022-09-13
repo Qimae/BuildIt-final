@@ -98,12 +98,12 @@ function EditorConfig() {
                 autosave: false,
                 setStepsBeforeSave: 1,
                 type: 'remote',
-                urlStore: `http://localhost:8000/`,
+                urlStore: `https://builditbackend.herokuapp.com/`,
                 urlLoad: '',
                 contentTypeJson: true,
             }
         })
-        setEditor(editor)
+        
         
         editor.Panels.addButton
             ('options',

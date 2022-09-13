@@ -50,7 +50,7 @@ export default function Register() {
           setPassErr(passerr);
           setEmailErr(emailErr);
           setUserErr(usererr);
-          console.log(userrerr);
+          console.log(usererr);
           // console.log(error.response.headers);
         } else if (error.request) {
           // The request was made but no response was received

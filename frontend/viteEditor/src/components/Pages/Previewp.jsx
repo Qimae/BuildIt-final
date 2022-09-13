@@ -30,12 +30,15 @@ function Previewp() {
 
     return ( 
     <div >
+        
+        <div dangerouslySetInnerHTML = {
+            { __html: tempprev } }
+        /> 
         <Helmet>
             <script>{js}</script>
         </Helmet>
-        <div dangerouslySetInnerHTML = {
-            { __html: tempprev } }
-        /> </div>
+        
+        </div>
     )
 }
 

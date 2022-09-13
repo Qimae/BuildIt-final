@@ -12,7 +12,8 @@ const axiosInstanceapi = axios.create({
       : null,
     "Content-Type": "application/json",
     accept: "application/json",
-  },
+  }
+  
 });
 
 axiosInstanceapi.interceptors.response.use(
