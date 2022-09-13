@@ -139,7 +139,7 @@ function EditorConfig() {
                                     "css": cssdata,
                                     "img_url": imgUrl
                                     // "author": {id}
-                                }).then(history("/pages")) : (
+                                }).then(alert("Page Saved")) : (
                                 id ? (
                                     axiosInstanceapi.post(`page-update/${id}/`,
                                         {
@@ -148,7 +148,7 @@ function EditorConfig() {
                                             "html": htmldata,
                                             "css": cssdata,
                                             "img_url": imgUrl
-                                        }).then(history("/pages"))) : axiosInstanceapi.post(`page-create/`,
+                                        }).then(alert("Page Saved"))) : axiosInstanceapi.post(`page-create/`,
                                             {
                                                 "name": "untitled",
                                                 "description": "no description",
@@ -156,7 +156,7 @@ function EditorConfig() {
                                                 "css": cssdata,
                                                 "img_url": imgUrl
                                                 // "author": {id}
-                                            }).then(history("/pages")))
+                                            }).then(alert("Page Saved")))
                     }
                 });
         editor.on('storage:load', function (e) { console.log('Loaded ', e); });
