@@ -159,13 +159,14 @@ function EditorConfig() {
                                             }).then(alert("Page Saved")))
                     }
                 });
+                setEditor(editor)
         editor.on('storage:load', function (e) { console.log('Loaded ', e); });
         editor.on('storage:store', function (e) { console.log('Stored ', e); });
 
+        
 
 
-
-    }, [imgUrl])
+    }, [])
 
     // const { id } = useParams()
     // const [temp, setTemp] = useState([])
