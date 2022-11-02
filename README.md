@@ -8,8 +8,8 @@ Nowadays, everyone needs to presence online where they can showcase their skill 
 
 # Screenshots
 
-<p><img src="https://i.postimg.cc/xCcfNwDx/buildit.png" alt="homepage" width="100%" height="300px" /></p>
-<p><img src="https://i.postimg.cc/3RVKXt3K/editor.png" alt="editor" width="100%" height="300px" /></p>
+<p><img src="https://i.postimg.cc/xCcfNwDx/buildit.png" alt="homepage" width="100%" /></p>
+<p><img src="https://i.postimg.cc/3RVKXt3K/editor.png" alt="editor" width="100%" /></p>
 
 
 
