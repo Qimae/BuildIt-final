@@ -45,7 +45,7 @@ Nowadays, everyone needs to presence online where they can showcase their skill 
   <li>Site Deployment</li>
   </ul>
 
-#Installation
+# Installation
 
 ## ------FOR LINUX/MAC---------
 ### installing venv 
@@ -73,7 +73,12 @@ run the backend server
 
 ```python3 manage.py runserver```
 
-#Credits
+# Credits
+
+Kimae Ngowa - Frontend Development
+Tihtina Sisay - Frontend Development
+Natnael Girma - Backend Development
+Abdisa Gemechu - Backend Development
 
 
 
