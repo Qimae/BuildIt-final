@@ -8,8 +8,9 @@ Nowadays, everyone needs to presence online where they can showcase their skill 
 
 # Screenshots
 
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/21MNEeT" data-context="false" ><a href="//imgur.com/a/21MNEeT"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script><br>
 <img src="https://imgur.com/a/21MNEeT" alt="homepage" align="right" width="300px" height="300px">
-<img src="https://imgur.com/a/PfU0uRI" alt="editor" align="right" width="300px" height="300px">
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/PfU0uRI" data-context="false" ><a href="//imgur.com/a/PfU0uRI"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 
 # Tech/framework used
