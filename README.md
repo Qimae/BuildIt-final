@@ -8,8 +8,9 @@ Nowadays, everyone needs to presence online where they can showcase their skill 
 
 # Screenshots
 
-<img src="https://imgur.com/a/21MNEeT" alt="homepage" width="100%">
-<img src="https://imgur.com/a/PfU0uRI" alt="editor" width="100%">
+<img src="https://imgur.com/a/21MNEeT" alt="homepage" align="right" width="300px" height="300px">
+<img src="https://imgur.com/a/PfU0uRI" alt="editor" align="right" width="300px" height="300px">
+
 
 # Tech/framework used
 
