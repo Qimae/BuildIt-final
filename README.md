@@ -76,9 +76,9 @@ run the backend server
 # Credits
 
 Kimae Ngowa - Frontend Development
+
 Tihtina Sisay - Frontend Development
+
 Natnael Girma - Backend Development
+
 Abdisa Gemechu - Backend Development
-
-
-
