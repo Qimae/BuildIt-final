@@ -8,21 +8,30 @@ Nowadays, everyone needs to presence online where they can showcase their skill 
 
 # Screenshots
 
-<img src="https://imgur.com/a/21MNEeT" alt="homepage" width="300px" height="300px" />
+<p><img src="https://imgur.com/a/21MNEeT" alt="homepage" width="300px" height="300px" /></p>
 
 
 # Tech/framework used
-
 ## Built with:
-  ReactJs
-  Boostrap
-  Tailwind
-  Django
-  REST
-  mySQL
-  JWT AUTH
-  HEROKU
-  NETLIFY
+
+    ReactJs
+    
+    Boostrap
+    
+    Tailwind
+    
+    Django
+    
+    REST
+    
+    mySQL
+    
+    JWT AUTH
+    
+    Heroku
+    
+    Netlify
+    
 
 # Features
   <ul>
